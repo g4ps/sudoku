@@ -1,0 +1,5 @@
+Program, that solves easy sudoku puzzles;
+It relies on AC-3 algorithm, and only solves sudokus, if the domain of a cell
+can be shrunk down to one;
+Maybe later i will revisit this program and i'll add functionality to solve harder
+puzzles
