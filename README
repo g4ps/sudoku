@@ -3,3 +3,21 @@ It relies on AC-3 algorithm, and only solves sudokus, if the domain of a cell
 can be shrunk down to one;
 Maybe later i will revisit this program and i'll add functionality to solve harder
 puzzles
+
+UPDATE 18.7.21: SOLVES ALL PUZZLES; theme of CSP resolvers captured my mind for a little while, and
+I decided to finish this program by introducing backtracking depth-first seach, as
+the chpter in the book suggested; also, I used MRV heuristic in that search, and it runs
+pretty good; Also, as a bonus I added functionality for creating sudoku puzzles;
+the algorithm is pretty stupid, so it freezes sometimes, especially on easy puzzles;
+
+
+
+-s filename                            --- to solve puzzle from filename
+-c [easy medium hard expert]           --- to create one
+--no options--                         --- read puzzle from standart input and solve it
+
+
+convert.awk - converts created puzzles from normal output to '0 is empty'
+
+
+./sudoku -c | ./convert.awk | ./sudoku --- creates and solves a puzzle

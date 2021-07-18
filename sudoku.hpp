@@ -25,11 +25,25 @@ public:
 
   void print() const;
 
-  bool solve();
+  bool infer();
 
   bool is_solved() const;
 
-  bool prune_cell(int y, int x);
+  bool arch_cons_cell(int y, int x);
+
+  bool solve();
+
+  int get_unsolved_cell();
+
+  int get_cell_domain(int x, int y);
+
+  void set_domain();
+
+  void print_domain(int y, int x);
+
+  void create(int k);
+
+  void clear();
 };
 
 #endif
